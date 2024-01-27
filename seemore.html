@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            text-align: left;
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+        ul{
+            width: 600px;
+            text-align: center;
+            margin-left:22vw ;
+            border: 1px solid transparent;
+            /* padding-top: 10px; */
+            background-image: linear-gradient(White,lightcyan);
+        }
+        button{
+            margin-left:41vw ;
+            padding: 3px 50px 3px 50px;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>hello</h1> -->
+    <ul></ul>
+    <button onclick="window.history.back()">Back</button>
+
+    <script>
+
+        let getul=document.getElementsByTagName("ul");
+        let img=document.createElement("img");
+        img.setAttribute("src",JSON.parse(localStorage.getItem("image")));
+        img.style.width="270";
+        img.style.height="290px";
+        getul[0].appendChild(img);
+        let li1=document.createElement("li");
+        li1.innerHTML=`<b>Id:</b>${localStorage.getItem("id")}`;
+        let li2=document.createElement("li");
+        li2.innerHTML=`<b>Title:</b>${localStorage.getItem("title")}`;
+        let li3=document.createElement("li");
+        li3.innerHTML=`<b>Description:</b>${localStorage.getItem("description")}`;
+        let li4=document.createElement("li");
+        li4.innerHTML=`<b>Category:</b>${localStorage.getItem("category")}`;
+        let li5=document.createElement("li");
+        li5.innerHTML=`<b>Price:</b>${localStorage.getItem("price")}`;
+        let li6=document.createElement("li");
+        li6.innerHTML=`<b>Rating:</b>${localStorage.getItem("rate")}`;
+        let li7=document.createElement("li");
+        li7.innerHTML=`<b>Count:</b>${localStorage.getItem("count")}`;
+
+        getul[0].appendChild(li1);
+        getul[0].appendChild(li2);
+        getul[0].appendChild(li3);
+        getul[0].appendChild(li4);
+        getul[0].appendChild(li5);
+        getul[0].appendChild(li6);
+        getul[0].appendChild(li7);
+
+        
+    </script>
+</body>
+</html>
